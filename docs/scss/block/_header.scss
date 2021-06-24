@@ -63,6 +63,10 @@
         font-weight: bold;
         letter-spacing: 0;
         padding-right: 2vw;
+        @include mq('tab'){
+            padding-right: 0;
+            width: 100%;
+        }
         a{
             display: block;
             text-align: center;
