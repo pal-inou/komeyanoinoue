@@ -1,0 +1,47 @@
+// main
+/*--------------------------*/
+/** Line Up **/
+/*--------------------------*/
+.lineup{
+    background: url(../../img/lineup-bg.jpg)  no-repeat center/cover;
+    width: 100%;
+    object-fit: cover;
+
+    &-inner{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        @include mq('sp'){
+            flex-wrap: wrap;
+        }
+    }
+
+    &-item{
+        margin: 0 auto;
+        width: 365px;
+    } 
+
+    &-img{
+        max-width: 222px;
+        margin: 0 auto;
+        img{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+    
+    &-text{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        max-width: 90%;
+        @include mq('sp'){
+            max-width: 100%;
+        }
+    }
+
+    &-btn{
+        @include btn-square($color_main);
+        margin: 0 auto;
+    }
+}

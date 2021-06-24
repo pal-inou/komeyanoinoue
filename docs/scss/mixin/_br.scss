@@ -1,0 +1,23 @@
+// SPのみ改行
+@mixin sp-br{
+    display: none;
+    @include mq('sp'){
+        display: block;
+        }
+}
+
+// tabサイズ以下で改行
+@mixin tab-br{
+    display: none;
+    @include mq('tab'){
+        display: block;
+    }
+}
+
+
+// PCのみ改行
+@mixin pc-br{
+    @include mq('tab'){
+        display: none;
+    }
+}

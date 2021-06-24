@@ -1,0 +1,116 @@
+// main
+/*--------------------------*/
+/**  Access **/
+/*--------------------------*/
+.access{
+    &-container{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: 0 auto;
+        @include mq('sp'){
+            flex-direction: column;
+        }
+    }
+
+    &-img{
+        margin-right: 4.16vw;
+        flex-basis: 50%;
+        max-width: 600px;
+        @include mq('sp'){
+            max-width: 100%;
+            margin: 0 0 20px;
+        }
+        
+        &_top{
+            margin-bottom: 15px;
+        }
+
+        &_btm{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            ._left{
+                flex-basis: 69%;
+                margin-right: 15px;
+            }
+            ._right{
+                flex-basis: 28%;
+            }
+        }
+    }
+
+    &-about{
+        flex-basis: 50%;
+        @include mq('tab'){
+            font-size: 90%;
+        }
+        @include mq('sp'){
+            font-size: 100%;
+        }
+    }
+
+    &-title{
+        font-size: clamp(2rem, 3.65vw ,2.8rem);
+        font-weight: bold;
+        margin-bottom: 20px;
+        line-height: 1;
+        @include mq('tab'){
+            margin-bottom: 15px;
+        }
+    }
+
+    &-list{
+        margin-bottom: 20px;
+        dt{
+            float: left;
+            width: 20%;
+            margin: 0 10px 10px 0;
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+        dd{
+            margin-bottom: 10px;
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-map{
+        display: block;
+        width: 200px;
+        margin-bottom: 20px;
+        color: $color_main;
+        @include mq('sp'){
+            margin-bottom: 40px;
+        }
+        img{
+            width: 20px;
+            height: 25px;
+            margin-right: 5px;
+        }
+        &:hover{
+            @include btn-opacity;
+        }
+    }
+
+    &-sns{
+        display: flex;
+        flex-wrap: nowrap;
+        width: 80px;
+        @include mq('sp'){
+            margin: 0 auto;
+        }
+        a{
+            display: block;
+            &:hover{
+                @include btn-opacity;
+            }
+        }
+        ._insta{
+            margin-right: 20px;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+// ----------------------------------
+// 共通ボタン
+// ----------------------------------
+// 四角形のボタン
+@mixin btn-square($bgc){
+    display: block;
+    text-align: center;
+    color: #fff;
+    background-color: $bgc;
+    width: 250px;
+    border-radius: 5px;
+    padding: 13px 0;
+    span{
+        position: relative;
+        padding: 0 45px;
+        &::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(45deg);
+        margin-top: -5px;
+        }
+    }
+
+    &:hover{
+        background-color: lighten($bgc,20%);
+        transition: transform .3s;
+        cursor: pointer;
+    }
+
+    @include mq('sp'){
+        margin: 0 auto;
+    }
+}
+
+// 丸形のボタン
+@mixin btn-circle {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    color: $color_main;
+    font-weight: bold;
+    span{
+        display: block;
+        border-radius: 50%;
+        position: relative;
+        width: 26px;
+        height: 26px;
+        background-color: $color_main;
+        margin-left: 6px;
+        &::after{
+        content: "";
+        position: absolute;
+        top: 30%;
+        right: 40%;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(45deg);
+        }
+    }
+    
+    &:hover{
+    @include link-hover($color_secondary);
+        span{
+        background-color: $color_secondary;
+        }
+    }
+}
+
+
+
+// [hover]背景色を明るく
+@mixin btn-lighten($bgc){
+    background-color: lighten($bgc,10%);
+    transition: transform .3s;
+}
+
+// [hover]透明化
+@mixin btn-opacity{
+    opacity: .5;
+    transition: transform .3s;
+}
+
+// [hover]背景色と文字色を指定
+@mixin btn-change($color,$bgc){
+    color: $color;
+    background-color: $bgc;
+    transition: transform .3s;
+    opacity: .9;
+}
+
+// [hover]リンク色変更
+@mixin link-hover($color){
+    color: $color;
+    transition: transform .3s;
+}

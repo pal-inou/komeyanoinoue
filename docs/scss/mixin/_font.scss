@@ -1,0 +1,12 @@
+// font-size
+@mixin fz($font_pc: "", $font_sp: ""){
+	font-size: #{$font_pc}px;
+	font-size: #{$font_pc / 10}rem;
+
+	@if ($font_sp != "") {
+    @include mq('sp') {
+    	font-size: #{$font_sp}px;
+    	font-size: #{$font_sp / 10}rem;
+    }
+  }
+}

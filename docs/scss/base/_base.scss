@@ -1,0 +1,46 @@
+// =======================================================
+// 共通設定 
+// =======================================================
+html{
+  font-size: 62.5%;
+}
+
+html,body{
+  height: 100%;
+}
+
+body{
+  font-size: 1.6em;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  font-family: $font-family_base;
+  color: $color_main;
+  @include mq('sp'){
+    overflow-X: hidden;
+	}
+
+  &.js-noscroll{
+    overflow: hidden;
+  }
+}
+
+ul,li,ol{
+  list-style-type: none;
+}
+
+img{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+path{
+  transition: .3s;
+}
+
+a{
+  text-decoration: none;
+  transition: 0.3s;
+  &:hover{
+    cursor: pointer;
+  }
+}

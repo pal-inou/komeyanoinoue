@@ -1,0 +1,49 @@
+/*--------------------------*/
+/** メインビジュアル **/
+/*--------------------------*/
+
+.mv{
+    min-height: 550px;
+    background: url(../../img/fv.jpg) no-repeat center/cover;
+    position: relative;
+    
+    &-copy{
+        font-family: $font-family_copy;
+        font-style: normal;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        img{
+            display: block;
+            margin: 20px auto 0;
+            width: 50px;
+            height: 24px;
+            @include mq('sp'){
+                width: 48px;
+                height: 22px;
+            }
+        }
+
+        &_main{
+            @include fz(48, 32);
+            font-weight: bold;
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+            ._top{
+                color: #fff;
+            }
+            ._mid{
+                color: $color_secondary;
+            }
+        }
+
+        &_sub{
+            @include fz(24, 16);
+            font-weight: bold;
+            margin-left: -20px;
+        }
+    }    
+}

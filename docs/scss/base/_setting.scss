@@ -1,0 +1,20 @@
+// フォントファミリー
+$font-family_base: "Meiryo", 'メイリオ', 'Noto Sans', 'Noto Sans JP', "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "游ゴシック Medium", "Yu Gothic Medium", "YuGothic", "游ゴシック体", "verdana", sans-serif;
+$font-family_copy: 'fot-tsukuardgothic-std', sans-serif;
+
+// ベースカラー
+$color_bg: #FAF7F0;
+$color_main: #3C3533;
+$color_primary: #F95E3A;
+$color_secondary: #B8945A;
+$color_title: #2C2E2A;
+
+// レイアウト・コンテナー幅
+$layout-width-inner: 1200px;
+
+// ブレークポイント
+$breakpoints: (
+ sp: "screen and (max-width: 767px)",
+ tab: "screen and (max-width: 1024px)",
+ pc: "screen and (min-width: 1025px)",
+);

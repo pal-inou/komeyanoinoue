@@ -1,0 +1,74 @@
+// main
+/*--------------------------*/
+/**  Contact **/
+/*--------------------------*/
+.contact{
+    background: url("../../img/contact-bg.jpg")no-repeat center/cover;
+
+    &-message{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &-menu{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        @include mq('sp'){
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &-btn{
+        display: block;
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+        border-radius: 10px;
+        font-weight: bold;
+        &._tel{
+            background-color: #fff;
+            color: $color_main;
+            margin-right: 50px;
+            padding-top: 15px;
+            @include mq('sp'){
+                margin: 0 0 10px;
+            }
+            svg{
+                width: 30px;
+                height: 27px;
+                vertical-align: baseline;
+            }
+            ._top{
+                @include fz(30,26);
+                line-height: 1;
+            }
+            ._btm{
+                font-size: 1.4rem;
+                font-weight: normal;
+            }
+            &:hover,
+            &:hover path{
+                @include btn-change(#fff,$color_main);
+                fill: #fff !important;
+            }
+        }
+        
+        &._mail{
+            background-color: $color_primary;
+            color: #fff;
+            @include fz(24,20);
+            line-height: 3.75;
+            img{
+                width: 27px;
+                height: 27px;
+                vertical-align: middle;
+                margin-right: 7px;
+            }
+            &:hover{
+                @include btn-lighten($color_primary);
+            }
+        }
+    }
+}

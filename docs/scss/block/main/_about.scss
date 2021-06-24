@@ -1,0 +1,68 @@
+// main
+/*--------------------------*/
+/** About **/
+/*--------------------------*/
+
+.about{
+    &-lead{
+        font-size: clamp(2rem,5.3vw,3.2rem); /*clamp([最小値], [推奨値], [最大値])*/
+        font-weight: bold;
+        span{
+            color: $color_secondary;
+        }
+    }
+
+    &-inner{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        @include mq('sp'){
+            flex-direction: column-reverse;
+        }
+    }
+
+    &-text{
+        flex-basis: 50%;
+        margin: 35px 100px 0 0;
+        p{
+            margin-bottom: 40px;
+        }
+        @include mq('tab'){
+            margin-right: 40px;
+        }
+        @include mq('sp'){
+            margin-right: 0;
+        }
+    }
+
+    &-img{
+        flex-basis: 70%;
+        &_top{
+            margin-bottom: 40px;
+            text-align: left;
+            margin-right: auto;
+            @include mq('tab'){
+                margin: 40px 0 20px 0;
+            }
+            @include mq('sp'){
+                margin: 20px 0 20px 0;
+            }
+        }
+        &_btm{
+            margin-left: auto;
+            text-align: right;
+        }
+        img{
+            max-width: 430px;
+            max-height: 230px;
+            @include mq('tab'){
+                max-width: 80%;
+            }
+        }
+    }
+
+    &-btn{
+        @include btn-square($color_main);
+    }
+}

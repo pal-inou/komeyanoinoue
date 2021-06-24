@@ -1,0 +1,115 @@
+/*--------------------------*/
+/** SP-header **/
+/*--------------------------*/
+.sp-header{
+    display: none;
+    @include mq('tab'){
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        width: 100%;
+    }
+    &-inner{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+        height: 70px;
+    }
+    &-logo{
+        width: 135px;
+        height: auto;
+        &:hover{
+            @include btn-opacity;
+        }
+        // [js]mv過ぎたらロゴを隠す
+        &.js-hide{
+            opacity: 0;
+            transition: .3s;
+        }
+    }
+}
+
+.sp-nav{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 100%;
+    
+    &-item{
+        font-size: 1rem;
+        font-weight: bold;
+        letter-spacing: 0;
+        width: 70px;
+        a{
+            display: block;
+            text-align: center;
+            padding: 12px 0;
+            color: #fff;
+            &:hover{
+                opacity: 1;
+            }
+        }
+        img{
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin: 0 auto 4px;
+        }
+        
+        &._contact{
+            background-color: $color_secondary;
+            &:hover a{
+                @include btn-lighten($color_secondary);
+            }
+        }
+        &._cart{
+            background-color: $color_primary;
+            &:hover a{
+                @include btn-lighten($color_primary);
+            }
+        }
+        &._menu{
+            background-color: $color_bg;
+        }
+    }
+}
+
+.sp-btn{
+    display: block;
+    padding: 13.5px 0;
+    margin: 0 auto;
+    width: 100%;
+    transition: .3s;
+    &:hover{
+        @include btn-lighten($color_bg);
+    }
+    &-bar{
+        display: block;
+        background-color: $color_main;
+        width: 25px;
+        height: 3px;
+        margin: 0 auto 5px;
+        transition: .3s;
+        &:last-of-type{
+            margin-bottom: 6px;
+        }
+    }
+}
+
+.sp-btn.js-cross{
+    ._top{
+        transform: rotate(45deg) translate(8px,8px);
+        transition: .3s;
+    }
+    ._mid{
+        opacity: 0;
+        transition: .3s;
+    }
+    ._btm{
+        transform: rotate(-45deg) translate(4px,-4px);
+        transition: .3s;
+    }
+}

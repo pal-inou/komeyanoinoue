@@ -1,0 +1,70 @@
+// =======================================================
+// セクション共通設定 
+// =======================================================
+
+// コンテンツ幅
+.section-container{
+    max-width: $layout-width-inner;
+    margin: 0 auto;
+    width: 90%;
+    @include mq('sp'){
+      padding: 0 4vw;
+      width: 100%;
+    }
+    &._full{
+      @include mq('sp'){
+        padding: 0;
+        width: 100%;
+      }
+    }
+}
+
+// 上下余白
+.section-wrapper{
+    padding: 100px 0;
+    @include mq('sp'){
+      padding: 60px 0 80px;
+    }
+}
+
+// タイトル
+.section-title{
+    text-align: center;
+    &._ja{
+      @include fz(36, 29);
+      font-weight: bold;
+      line-height: 1;
+      letter-spacing: 0.1em;
+    }
+
+    &._en{
+      display: block;
+      line-height: 3;
+      margin-bottom: 50px;
+      &::after{
+        content: "";
+        display: block;
+        width: 60px;
+        height: 6px;
+        border-radius: 30px;
+        margin: 0 auto;
+        background-color: $color_secondary;
+      }
+    }
+}
+
+// 改行
+.section-br{
+  &._sp{
+    @include sp-br;
+  }
+
+  &._tab{
+    @include tab-br;
+  }
+
+  &._pc{
+    @include pc-br;
+  }
+}
+

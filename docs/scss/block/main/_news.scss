@@ -1,0 +1,44 @@
+// main
+/*--------------------------*/
+/**  News **/
+/*--------------------------*/
+.news{
+    &-inner{
+        max-width: 830px;
+        margin: 0 auto;
+    }
+
+    &-list{
+        margin-bottom: 30px;
+        a{
+            color: $color_main;
+            &:hover{
+                @include link-hover($color_secondary);
+                // display: block;
+            }
+        }
+    }
+    
+    &-date{
+        float: left;
+        margin: 0 100px 10px 0;
+        &._last{
+            margin-bottom: 0;
+        }
+    }
+
+    &-title{
+        margin-bottom: 10px;
+        &._last{
+            margin-bottom: 0;
+        }
+        @include mq('sp'){
+            clear: left;
+            margin: 0 0 40px 15px;
+        }
+    }
+
+    &-btn{
+        @include btn-circle;
+    }
+}
