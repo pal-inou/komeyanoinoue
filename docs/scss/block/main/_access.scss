@@ -45,9 +45,6 @@
         @include mq('tab'){
             font-size: 90%;
         }
-        @include mq('sp'){
-            font-size: 100%;
-        }
     }
 
     &-title{
