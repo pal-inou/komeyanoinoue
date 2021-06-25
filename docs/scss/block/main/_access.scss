@@ -42,9 +42,6 @@
 
     &-about{
         flex-basis: 50%;
-        @include mq('tab'){
-            font-size: 1.3rem;
-        }
     }
 
     &-title{
@@ -59,6 +56,10 @@
 
     &-list{
         margin-bottom: 20px;
+            @include mq('tab'){
+                font-size: 1.3rem;
+            }
+        
         dt{
             float: left;
             width: 20%;
@@ -80,6 +81,9 @@
         width: 200px;
         margin-bottom: 20px;
         color: $color_main;
+        @include mq('tab'){
+            font-size: 1.3rem;
+        }
         @include mq('sp'){
             margin-bottom: 40px;
         }
